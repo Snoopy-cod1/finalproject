@@ -1,13 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Comfortaa:wght@300..700&family=Dosis&family=Jura:wght@300..700&family=LXGW+WenKai+Mono+TC&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Neucha&family=Oswald:wght@200..700&family=Permanent+Marker&family=Podkova:wght@400..800&family=Single+Day&family=Tektur:wght@400..900&family=Unbounded:wght@200..900&display=swap');
-
+html{
+    scroll-behavior: smooth;
+}
 .love{
     color: rgb(207, 8, 8);
 }
 *{
     background-color: #8DA7BE;
     font-family: 'Merriweather';
+    transition: 1.5s;
 }
 header, main, footer{
     display: flex;
     justify-content: center;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.action, .comedy, .scifi, .horror, .drama{
+    background-color: #CDE6F5;
+    height: 400px;
+    width: 600px;
+    margin: 32px;
+}
+
+header{
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+ul li a{
+    text-decoration: none;
+    color:black;
+}
+ul li{
+    padding: 8px;
+}
+h1{
+    text-align: center;
 }
