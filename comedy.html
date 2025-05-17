@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelRover</title>
+    <link rel = "stylesheet" href = "style_comedy.css">
+    <link rel="icon" href="camera.png" type="image/x-icon">
+    <style>
+        /* Анимация исчезновения */
+        .fade-out {
+          animation: fadeOut 0.5s ease forwards;
+        }
+        
+        @keyframes fadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+      </style>
+      <!-- Важно для предотвращения мгновенной перезагрузки -->
+      <meta http-equiv="Page-Enter" content="revealtrans(Duration=0.5,Transition=12)">
+</head>
+<body>
+    <header>
+        <h1>ReelRover</h1>
+        <h3>Комедии</h3>
+        <!-- якорные ссылки к каждому виду фильмов -->
+         <ul class = "home">
+            <li><a href="index.html">Домой</a></li>
+         </ul>
+    </header>
+    <main>
+        <div class = "container">
+            <div class = "film">
+                <!-- короче надо написать боевик че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Брюс Всемогущий» (2003)</h2>
+                 <p class = "info">Джим Керри в роли обычного человека, получившего божественные силы. Фильм сочетает искромётный юмор и философские вопросы о жизни.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/39577/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                <!-- короче надо написать комедия че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                <h2 class = "name">«Один дома» (1990)</h2>
+                <p class = "info">Маленький Кевин (Маколей Калкин) остаётся один дома и даёт отпор грабителям. Культовая рождественская комедия с гениальными ловушками.</p>
+                <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/8124/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать фантастика че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Мальчишник в Вегасе» (2009)</h2>
+                 <p class = "info">Группа друзей устраивает безумный мальчишник, после которого не помнят, куда делся жених. Один из самых цитируемых фильмов 2000-х.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/426004/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать ужасы че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Девичник» (2011)</h2>
+                 <p class = "info">Четыре подруги перед свадьбой отправляются в Майами, где их ждут пьяные приключения и неловкие ситуации.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/470170/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать драма че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Третий лишний» (2012)</h2>
+                 <p class = "info">История взросления мальчика и его необычного друга — говорящего плюшевого медведя с похабным чувством юмора.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/507817/">Смотреть</a></button>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>made by Snoopy with <span class = "love">♥</span></p>
+    </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            
+            setTimeout(() => {
+              window.location.href = this.href;
+            }, 500); // Должно совпадать с длительностью анимации
+          });
+        });
+      </script>
+</body>
+</html>

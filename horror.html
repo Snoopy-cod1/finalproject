@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelRover</title>
+    <link rel = "stylesheet" href = "style_horror.css">
+    <link rel="icon" href="camera.png" type="image/x-icon">
+    <style>
+        /* Анимация исчезновения */
+        .fade-out {
+          animation: fadeOut 0.5s ease forwards;
+        }
+        
+        @keyframes fadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+      </style>
+      <!-- Важно для предотвращения мгновенной перезагрузки -->
+      <meta http-equiv="Page-Enter" content="revealtrans(Duration=0.5,Transition=12)">
+</head>
+<body>
+    <header>
+        <h1>ReelRover</h1>
+        <h3>Ужасы</h3>
+        <!-- якорные ссылки к каждому виду фильмов -->
+         <ul class = "home">
+            <li><a href="index.html">Домой</a></li>
+         </ul>
+    </header>
+    <main>
+        <div class = "container">
+            <div class = "film">
+                <!-- короче надо написать боевик че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Оно» (2017)</h2>
+                 <p class = "info">Дети из городка Дерри борются с древним злом в облике клоуна Пеннивайза. Жуткая атмосфера и отличная игра юных актёров.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/476/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                <!-- короче надо написать комедия че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                <h2 class = "name">«Сияние» (1980)</h2>
+                <p class = "info">Джек Николсон сходит с ума в изолированном отеле. Эталон психологического ужаса от Стэнли Кубрика.</p>
+                <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/403/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать фантастика че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Заклятие» (2013)</h2>
+                 <p class = "info">Семья переезжает в дом, где их преследует демоническая сущность. Один из лучших современных хорроров про одержимость.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/258687/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать ужасы че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Пила» (2004)</h2>
+                 <p class = "info">Жертвы попадают в смертельные ловушки загадочного маньяка. Фильм запустил культовую франшизу и новый поджанр — «трэп-хоррор».</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/386/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать драма че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Хэллоуин» (1978)</h2>
+                 <p class = "info">Майкл Майерс сбегает из психушки и возвращается в родной город, чтобы убивать. Классика слэшеров.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/2656/">Смотреть</a></button>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>made by Snoopy with <span class = "love">♥</span></p>
+    </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            
+            setTimeout(() => {
+              window.location.href = this.href;
+            }, 500); // Должно совпадать с длительностью анимации
+          });
+        });
+      </script>
+</body>
+</html>

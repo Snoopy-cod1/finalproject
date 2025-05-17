@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelRover</title>
+    <link rel = "stylesheet" href = "style_fantasy.css">
+    <link rel="icon" href="camera.png" type="image/x-icon">
+    <style>
+        /* Анимация исчезновения */
+        .fade-out {
+          animation: fadeOut 0.5s ease forwards;
+        }
+        
+        @keyframes fadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+      </style>
+      <!-- Важно для предотвращения мгновенной перезагрузки -->
+      <meta http-equiv="Page-Enter" content="revealtrans(Duration=0.5,Transition=12)">
+</head>
+<body>
+    <header>
+        <h1>ReelRover</h1>
+        <h3>Фантастика</h3>
+        <!-- якорные ссылки к каждому виду фильмов -->
+         <ul class = "home">
+            <li><a href="index.html">Домой</a></li>
+         </ul>
+    </header>
+    <main>
+        <div class = "container">
+            <div class = "film">
+                <!-- короче надо написать боевик че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Назад в будущее» (1985)</h2>
+                 <p class = "info">Подросток Марти Макфлай попадает в 1955 год и случайно меняет будущее. Идеальный микс приключений, юмора и научной фантастики.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/476/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                <!-- короче надо написать комедия че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                <h2 class = "name">«Бегущий по лезвию» (1982)</h2>
+                <p class = "info">Неонуарный шедевр Ридли Скотта о охотнике за репликантами в мрачном будущем Лос-Анджелеса. Визуальная поэзия и философские вопросы о человечности.</p>
+                <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/403/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать фантастика че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Интерстеллар» (2014)</h2>
+                 <p class = "info">Команда астронавтов ищет новый дом для человечества через червоточину. Грандиозный визуал и глубокая научная основа.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/258687/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать ужасы че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Чужой» (1979)</h2>
+                 <p class = "info">Экипаж космического корабля сталкивается с идеальным убийцей. Эталон космического хоррора и фантастики.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/386/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать драма че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Пятый элемент» (1997)</h2>
+                 <p class = "info">Яркий, безумный мир будущего, где таксист (Брюс Уиллис) спасает вселенную с помощью загадочной девушки-инопланетянки.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/2656/">Смотреть</a></button>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>made by Snoopy with <span class = "love">♥</span></p>
+    </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            
+            setTimeout(() => {
+              window.location.href = this.href;
+            }, 500); // Должно совпадать с длительностью анимации
+          });
+        });
+      </script>
+</body>
+</html>

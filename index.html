@@ -6,6 +6,19 @@
     <title>ReelRover</title>
     <link rel = "stylesheet" href = "style.css">
     <link rel="icon" href="camera.png" type="image/x-icon">
+    <style>
+        /* Анимация исчезновения */
+        .fade-out {
+          animation: fadeOut 0.5s ease forwards;
+        }
+        
+        @keyframes fadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+      </style>
+      <!-- Важно для предотвращения мгновенной перезагрузки -->
+      <meta http-equiv="Page-Enter" content="revealtrans(Duration=0.5,Transition=12)">
 </head>
 <body>
     <header>
@@ -23,18 +36,33 @@
         <div class = "container">
             <div class = "action" id = "action">
                 <!-- короче надо написать боевик че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">Боевик</h2>
+                 <p class = "info">Боевики насыщены динамичными сценами, погонями и перестрелками, часто с участием харизматичных героев. Основной акцент делается на зрелищности и экшене, а сюжет обычно прост и прямолинеен.</p>
+                 <button class = "gotofilms"><a href = "action.html">Перейти к фильмам</a></button>
             </div>
             <div class = "comedy" id = "comedy">
                 <!-- короче надо написать комедия че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                <h2 class = "name">Комедия</h2>
+                <p class = "info">Комедии созданы для того, чтобы смешить зрителя через юмор, нелепые ситуации и остроумные диалоги. Они могут быть как лёгкими и семейными, так и сатирическими или даже чёрными.</p>
+                <button class = "gotofilms" ><a href = "comedy.html">Перейти к фильмам</a></button>
             </div>
             <div class = "scifi" id = "scifi">
                  <!-- короче надо написать фантастика че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">Фантастика</h2>
+                 <p class = "info">Фантастика переносит зрителя в будущее или альтернативные реальности, часто с использованием современных технологий и космических путешествий. Жанр исследует научные и социальные гипотезы, иногда переплетаясь с фэнтези.</p>
+                 <button class = "gotofilms"><a href = "fantasy.html">Перейти к фильмам</a></button>
             </div>
             <div class = "horror" id = "horror">
                  <!-- короче надо написать ужасы че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">Ужасы</h2>
+                 <p class = "info">Фильмы ужасов призваны пугать зрителя через атмосферу напряжённости, неожиданные прыжки и сверхъестественные элементы. Они могут быть психологическими или основанными на кровавых сценах.</p>
+                 <button class = "gotofilms"><a href = "horror.html">Перейти к фильмам</a></button>
             </div>
             <div class = "drama" id = "drama">
                  <!-- короче надо написать драма че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">Драма</h2>
+                 <p class = "info">Драмы фокусируются на глубоких человеческих эмоциях, конфликтах и жизненных испытаниях. Сюжеты часто реалистичны и заставляют зрителя сопереживать персонажам.</p>
+                 <button class = "gotofilms"><a href = "drama.html">Перейти к фильмам</a></button>
             </div>
         </div>
 
@@ -42,5 +70,17 @@
     <footer>
         <p>made by Snoopy with <span class = "love">♥</span></p>
     </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            
+            setTimeout(() => {
+              window.location.href = this.href;
+            }, 500); // Должно совпадать с длительностью анимации
+          });
+        });
+      </script>
 </body>
 </html>

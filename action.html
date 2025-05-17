@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelRover</title>
+    <link rel = "stylesheet" href = "style_action.css">
+    <link rel="icon" href="camera.png" type="image/x-icon">
+    <style>
+        /* Анимация исчезновения */
+        .fade-out {
+          animation: fadeOut 0.5s ease forwards;
+        }
+        
+        @keyframes fadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+      </style>
+      <!-- Важно для предотвращения мгновенной перезагрузки -->
+      <meta http-equiv="Page-Enter" content="revealtrans(Duration=0.5,Transition=12)">
+</head>
+<body>
+    <header>
+        <h1>ReelRover</h1>
+        <h3>Боевик</h3>
+        <!-- якорные ссылки к каждому виду фильмов -->
+         <ul class = "home">
+            <li><a href="index.html">Домой</a></li>
+         </ul>
+    </header>
+    <main>
+        <div class = "container">
+            <div class = "film">
+                <!-- короче надо написать боевик че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Терминатор 2: Судный день» (1991)</h2>
+                 <p class = "info">Культовый фильм Джеймса Кэмерона с Арнольдом Шварценеггером в роли киборга-защитника. Захватывающий сюжет, революционные спецэффекты и динамичные сцены погонь сделали его эталоном жанра.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/444/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                <!-- короче надо написать комедия че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                <h2 class = "name">«Крепкий орешек» (1988)</h2>
+                <p class = "info">Брюс Уиллис в роли полицейского Джона Макклейна, который в одиночку противостоит террористам в небоскрёбе. Фильм задал стандарты героического боевика с идеальным балансом экшена и юмора.</p>
+                <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/471/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать фантастика че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Матрица» (1999)</h2>
+                 <p class = "info">Фантастический боевик о хакере Нео (Киану Ривз), который узнаёт, что мир — это симуляция. Замедленные перестрелки, философский подтекст и новаторские спецэффекты изменили киноиндустрию.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/301/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать ужасы че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Безумный Макс: Дорога ярости» (2015)</h2>
+                 <p class = "info">Безумный гонки по постапокалиптической пустыне с невероятными трюками и визуальной стилистикой. Фильм Джорджа Миллера — это бесконечный адреналин и минималистичный, но мощный сюжет.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/453406/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать драма че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Убить Билла» (2003)</h2>
+                 <p class = "info">Режиссёр Квентин Тарантино создал кровавую оду мести с Умой Турман в главной роли. Фильм сочетает жестокие схватки на мечах, стилизацию под старые боевики и потрясающий саундтрек.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/2717/">Смотреть</a></button>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>made by Snoopy with <span class = "love">♥</span></p>
+    </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            
+            setTimeout(() => {
+              window.location.href = this.href;
+            }, 500); // Должно совпадать с длительностью анимации
+          });
+        });
+      </script>
+</body>
+</html>

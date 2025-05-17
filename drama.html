@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelRover</title>
+    <link rel = "stylesheet" href = "style_drama.css">
+    <link rel="icon" href="camera.png" type="image/x-icon">
+    <style>
+        /* Анимация исчезновения */
+        .fade-out {
+          animation: fadeOut 0.5s ease forwards;
+        }
+        
+        @keyframes fadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+      </style>
+      <!-- Важно для предотвращения мгновенной перезагрузки -->
+      <meta http-equiv="Page-Enter" content="revealtrans(Duration=0.5,Transition=12)">
+</head>
+<body>
+    <header>
+        <h1>ReelRover</h1>
+        <h3>Драма</h3>
+        <!-- якорные ссылки к каждому виду фильмов -->
+         <ul class = "home">
+            <li><a href="index.html">Домой</a></li>
+         </ul>
+    </header>
+    <main>
+        <div class = "container">
+            <div class = "film">
+                <!-- короче надо написать боевик че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Побег из Шоушенка» (1994)</h2>
+                 <p class = "info">История банкира Энди Дюфрейна, который 20 лет планирует побег из тюрьмы. Фильм о надежде и силе духа.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/326/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                <!-- короче надо написать комедия че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                <h2 class = "name">«Форрест Гамп» (1994)</h2>
+                <p class = "info">Простой парень (Том Хэнкс) случайно становится участником ключевых событий США. Трогательная сага о жизни и любви.</p>
+                <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/448/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать фантастика че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Зелёная книга» (2018)</h2>
+                 <p class = "info">Путешествие афроамериканского пианиста и его грубоватого водителя по югу США 1960-х. История дружбы и борьбы с расизмом.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/1108577/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать ужасы че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«1+1» (2011)</h2>
+                 <p class = "info">Богатый парализованный аристократ нанимает в сиделки бывшего заключённого. Неожиданная дружба меняет жизни обоих.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/535341/">Смотреть</a></button>
+            </div>
+            <div class = "film">
+                 <!-- короче надо написать драма че то еще может добавить что за жанр и кнопку перейти к фильмам  -->
+                 <h2 class = "name">«Леон» (1994)</h2>
+                 <p class = "info">Профессиональный киллер берёт под опеку девочку-сироту. Жёсткий, но трогательный фильм о мести и привязанности.</p>
+                 <button class = "gotofilms"><a target="_blank" href = "https://www.kinopoisk.ru/film/389/">Смотреть</a></button>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>made by Snoopy with <span class = "love">♥</span></p>
+    </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            
+            setTimeout(() => {
+              window.location.href = this.href;
+            }, 500); // Должно совпадать с длительностью анимации
+          });
+        });
+      </script>
+</body>
+</html>
