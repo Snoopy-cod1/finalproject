@@ -80,7 +80,7 @@ h1{
     .action, .comedy, .scifi, .horror, .drama{
         background-color: #CDE6F5;
         padding: 9px;
-        width: 337.5px;
+        width: 400px;
         margin: 18px;
     }
 }
@@ -90,7 +90,7 @@ h1{
     .action, .comedy, .scifi, .horror, .drama{
         background-color: #CDE6F5;
         padding: 6.5px;
-        width: 243.75px;
+        width: 400px;
         margin: 13px;
     }
 }
@@ -98,7 +98,7 @@ h1{
     .action, .comedy, .scifi, .horror, .drama{
         background-color: #CDE6F5;
         padding: 4px;
-        width: 200px;
+        width: 100%;
         margin: 7px;
     }
 }
