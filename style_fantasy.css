@@ -81,7 +81,6 @@ footer{
 }
 @media screen and (max-width: 1080px) {
     .film{
-        background-color: #CDE6F5;
         padding: 9px;
         width: 400x;
         margin: 18px;
@@ -99,7 +98,7 @@ footer{
 @media screen and (max-width: 420px) {
     .film{
         padding: 4px;
-        width: 100%;
+        width: 96%;
         margin: 7px;
     }
 }
