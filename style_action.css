@@ -55,6 +55,10 @@ a{
     padding: 16px;
     border-width: 0.3px;
     transition: 0.4s;
+    -webkit-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+-moz-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    border-color: black;
 }
 .gotofilms:hover{
     background-color: #3E3E3E;
@@ -79,6 +83,7 @@ footer{
 }
 @media screen and (max-width: 1080px) {
     .film{
+        background-color: #800000;
         padding: 9px;
         width: 400x;
         margin: 18px;
@@ -88,6 +93,7 @@ footer{
 /* Медиа-запросы для мобильных устройств */
 @media screen and (max-width: 780px) {
     .film{
+        background-color: #800000;
         padding: 6.5px;
         width: 400px;
         margin: 13px;
@@ -95,6 +101,7 @@ footer{
 }
 @media screen and (max-width: 420px) {
     .film{
+        background-color: #800000;
         padding: 4px;
         width: 96%;
         margin: 7px;
