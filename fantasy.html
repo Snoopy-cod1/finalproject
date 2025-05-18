@@ -6,19 +6,6 @@
     <title>ReelRover</title>
     <link rel = "stylesheet" href = "style_fantasy.css">
     <link rel="icon" href="camera.png" type="image/x-icon">
-    <style>
-        /* Анимация исчезновения */
-        .fade-out {
-          animation: fadeOut 0.5s ease forwards;
-        }
-        
-        @keyframes fadeOut {
-          from { opacity: 1; }
-          to { opacity: 0; }
-        }
-      </style>
-      <!-- Важно для предотвращения мгновенной перезагрузки -->
-      <meta http-equiv="Page-Enter" content="revealtrans(Duration=0.5,Transition=12)">
 </head>
 <body>
     <header>
@@ -67,17 +54,5 @@
     <footer>
         <p>made by Snoopy with <span class = "love">♥</span></p>
     </footer>
-    <script>
-        document.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            
-            setTimeout(() => {
-              window.location.href = this.href;
-            }, 500); // Должно совпадать с длительностью анимации
-          });
-        });
-      </script>
 </body>
 </html>

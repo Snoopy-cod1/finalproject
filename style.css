@@ -42,6 +42,7 @@ ul{
 ul li a{
     text-decoration: none;
     color:black;
+    margin-left: -600px;
 }
 ul li{
     padding: 8px;
@@ -49,6 +50,7 @@ ul li{
 a{
     text-decoration: none;
     color:black;
+    
 }
 h1{
     text-align: center;
@@ -70,4 +72,33 @@ h1{
 }
 .gotofilms:hover{
     background-color: #8DA7BE;
+}
+*{
+    transition: 1s;
+}
+@media screen and (max-width: 1080px) {
+    .action, .comedy, .scifi, .horror, .drama{
+        background-color: #CDE6F5;
+        padding: 9px;
+        width: 337.5px;
+        margin: 18px;
+    }
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media screen and (max-width: 780px) {
+    .action, .comedy, .scifi, .horror, .drama{
+        background-color: #CDE6F5;
+        padding: 6.5px;
+        width: 243.75px;
+        margin: 13px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .action, .comedy, .scifi, .horror, .drama{
+        background-color: #CDE6F5;
+        padding: 4px;
+        width: 75px;
+        margin: 7px;
+    }
 }
