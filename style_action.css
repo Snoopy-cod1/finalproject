@@ -79,6 +79,7 @@ footer{
 }
 @media screen and (max-width: 1080px) {
     .film{
+        background-color: #800000;
         padding: 9px;
         width: 400x;
         margin: 18px;
@@ -88,6 +89,7 @@ footer{
 /* Медиа-запросы для мобильных устройств */
 @media screen and (max-width: 780px) {
     .film{
+        background-color: #800000;
         padding: 6.5px;
         width: 400px;
         margin: 13px;
@@ -95,6 +97,7 @@ footer{
 }
 @media screen and (max-width: 420px) {
     .film{
+        background-color: #800000;
         padding: 4px;
         width: 96%;
         margin: 7px;
